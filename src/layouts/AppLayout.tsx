@@ -3,7 +3,7 @@ import Sidebar from "../components/Sidebar"
 
 function AppLayout() {
     return (
-        <div className="min-h-screen bg-gray-50 flex">
+        <div className="min-h-screen bg-gray-200 flex">
             <Sidebar />
             <main className="flex-1">
                 <Outlet />
