@@ -1,21 +1,24 @@
 function Sidebar() {
     return (
-        <div className="min-w-64 flex bg-gray-400 flex flex-col">
-            <div className="text-1xl font-bold p-6 px-8 flex gap-2">
-                <span>🏠</span>
-                <span>JobBoard</span>
-            </div>
+        <div className="min-w-64 flex bg-gray-200 flex flex-col border-r border-gray-300 border-r-2 shadow-md">
+
 
             <ul className="text-sm text-gray-500 p-6 flex flex-col gap-4">
-                <li className="flex items-center gap-2 p-2 rounded hover:bg-gray-300 cursor-pointer">
+                <li>
+                    <div className="text-xl font-bold text-black flex items-center gap-2 p-2">
+                        <span>🏠</span>
+                        <span>JobBoard</span>
+                    </div>
+                </li>
+                <li className="flex items-center gap-2 p-2 rounded hover:bg-blue-200 hover:text-blue-400 cursor-pointer">
                     <span>🏠</span>
                     <span>Jobs</span>
                 </li>
-                <li className="flex items-center gap-2 p-2 rounded hover:bg-gray-300 cursor-pointer">
+                <li className="flex items-center gap-2 p-2 rounded hover:bg-blue-200 hover:text-blue-400 cursor-pointer">
                     <span>📄</span>
                     <span>Applications</span>
                 </li>
-                <li className="flex items-center gap-2 p-2 rounded hover:bg-gray-300 cursor-pointer">
+                <li className="flex items-center gap-2 p-2 rounded hover:bg-blue-200 hover:text-blue-400 cursor-pointer">
                     <span>⭐</span>
                     <span>Saved</span>
                 </li>
