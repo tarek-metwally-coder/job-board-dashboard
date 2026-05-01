@@ -1,7 +1,6 @@
 import './App.css'
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import JobsPage from "./pages/JobsPage";
-import JobDetails from "./pages/JobDetails";
 import AppLayout from './layouts/AppLayout';
 
 function App() {
@@ -10,11 +9,11 @@ function App() {
     <BrowserRouter>
 
       <Routes>
-        <Route path='/' element={<Navigate to="/jobs" replace />} />
+        <Route path='/' element={<Navigate to='/jobs' replace />} />
 
-        <Route element={<AppLayout />}>
-          <Route path="/jobs" element={<JobsPage />} />
-          <Route path="/jobs/:id" element={<JobDetails />} />
+        <Route path='/jobs' element={<AppLayout />}>
+          <Route index element={<JobsPage />} />
+          <Route path=':id' element={<JobsPage />} />
 
         </Route>
 

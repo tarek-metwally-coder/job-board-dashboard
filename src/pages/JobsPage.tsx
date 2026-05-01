@@ -8,10 +8,22 @@ export default function JobsPage() {
             <div className="flex-1">
                 <JobsHeader />
                 <div id="jobs-taple" className="px-6 flex flex-col gap-2">
-                    <JobCard />
-                    <JobCard />
-                    <JobCard />
-                    <JobCard />
+                    {
+                        jobs.map((job) => (
+                            <Link to={`/jobs/${job.id}`}>
+                                <JobCard
+                                    key={job.id}
+                                    title={job.title}
+                                    company={job.company}
+                                    location={job.location}
+                                    logo={job.logo}
+                                    description={job.description}
+                                />
+                            </Link>
+
+                        )
+                        )
+                    }
                 </div>
                 <div>here is the pagination may shrink size of cards to git rid of the scroll </div>
             </div>
