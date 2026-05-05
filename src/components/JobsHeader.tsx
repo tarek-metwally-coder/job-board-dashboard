@@ -3,7 +3,7 @@ import FilterSelector from "./FilterSelector"
 function JobsHeader() {
   return (
     <div className="">
-      <div className="flex justify-between border-b border-gray-300 p-6">
+      <div className="flex justify-between border-b border-gray-300 py-6 ps-2">
         <div className="min-w-42">
           <h1 className="text-2xl font-bold">Jobs</h1>
           <p className="text-sm text-gray-500">Find your next opportunity</p>

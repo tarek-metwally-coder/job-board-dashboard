@@ -1,6 +1,6 @@
 function Sidebar() {
     return (
-        <div className="min-w-64 flex bg-gray-200 flex flex-col border-r border-gray-300 border-r-2 shadow-md">
+        <div className="min-w-45 flex bg-gray-200 flex flex-col border-r border-gray-300 border-r-2 shadow-md">
 
 
             <ul className="text-sm text-gray-500 p-6 flex flex-col gap-4">

@@ -1,4 +1,4 @@
-import placeholderlogo from "../assets/hero.png" 
+import placeholderlogo from "../assets/hero.png"
 export type Job = {
   id: string;
   title: string;
@@ -14,7 +14,7 @@ export const jobs: Job[] = [
     title: "Frontend Engineer",
     company: "Spotify",
     location: "Stockholm, Sweden",
-    description: "React + TypeScript frontend development",
+    description: "React + TypeScript.\n\nResponsibilities:\n- Build UI\n- Work with APIs\n- Collaborate with team",
     logo: placeholderlogo,
   },
   {
@@ -28,6 +28,15 @@ export const jobs: Job[] = [
   },
   {
     id: "3",
+    title: "React Developer",
+    company: "Volvo",
+    location: "Gothenburg, Sweden",
+    description: "UI dashboard development",
+    logo: placeholderlogo,
+
+  },
+  {
+    id: "4",
     title: "React Developer",
     company: "Volvo",
     location: "Gothenburg, Sweden",

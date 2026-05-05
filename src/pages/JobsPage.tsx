@@ -1,18 +1,27 @@
 import { jobs } from "../data/jobs";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import JobsHeader from '../components/JobsHeader'
 import JobCard from "../components/JobCard";
+import JobDetailPanel from "../components/JobDetailPanel";
 export default function JobsPage() {
+    const { id } = useParams();
+    const navigate = useNavigate();
+    const selectedJob = jobs.find((job) => job.id == id);
+    const oncloseHandler = () => {
+        navigate('/jobs');
+    };
+
+
     return (
-        <div className="flex gap-4 ">
-            <div className="flex-1">
+        <>
+            <div className="flex-1 min-w-0">
                 <JobsHeader />
                 <div id="jobs-taple" className="px-6 flex flex-col gap-2">
                     {
                         jobs.map((job) => (
-                            <Link to={`/jobs/${job.id}`}>
+                            <Link key={job.id}
+                                to={`/jobs/${job.id}`}>
                                 <JobCard
-                                    key={job.id}
                                     title={job.title}
                                     company={job.company}
                                     location={job.location}
@@ -29,12 +38,18 @@ export default function JobsPage() {
             </div>
 
 
-            <div className="p-6 flex">
 
-                <div className="flex-1 bg-gray-400 border shadow-md rounded border-gray-200 ">
-                    this is the dynamic details area
+            {selectedJob && (
+                <div className="py-6 w-[400px]">
+
+                    <JobDetailPanel
+                        job={selectedJob}
+                        onclose={oncloseHandler}
+                    />
                 </div>
-            </div>
-        </div>
+            )}
+
+
+        </>
     );
 }
