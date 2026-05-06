@@ -16,7 +16,7 @@ function JobsHeader() {
       </div>
 
       <div className="flex gap-4 p-6">
-        <input type="search" className="bg-gray-300" />
+        <input type="search" className="bg-gray-100" />
         <FilterSelector />
         <FilterSelector />
         <FilterSelector />

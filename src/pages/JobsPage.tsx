@@ -7,16 +7,16 @@ export default function JobsPage() {
     const { id } = useParams();
     const navigate = useNavigate();
     const selectedJob = jobs.find((job) => job.id == id);
-    const oncloseHandler = () => {
+    const onCloseHandler = () => {
         navigate('/jobs');
     };
 
 
     return (
         <>
-            <div className="flex-1 min-w-0">
+            <div className="flex-1 min-w-0 overflow-y-auto">
                 <JobsHeader />
-                <div id="jobs-taple" className="px-6 flex flex-col gap-2">
+                <div id="jobs-list" className="px-6 flex flex-col gap-2">
                     {
                         jobs.map((job) => (
                             <Link key={job.id}
@@ -27,6 +27,7 @@ export default function JobsPage() {
                                     location={job.location}
                                     logo={job.logo}
                                     description={job.description}
+                                    selected={selectedJob?.id === job.id}
                                 />
                             </Link>
 
@@ -34,17 +35,17 @@ export default function JobsPage() {
                         )
                     }
                 </div>
-                <div>here is the pagination may shrink size of cards to git rid of the scroll </div>
+                <div className="mt-auto">here is the pagination may shrink size of cards to git rid of the scroll </div>
             </div>
 
 
 
             {selectedJob && (
-                <div className="py-6 w-[400px]">
+                <div className="py-6 w-[400px] shrink-0">
 
                     <JobDetailPanel
                         job={selectedJob}
-                        onclose={oncloseHandler}
+                        onClose={onCloseHandler}
                     />
                 </div>
             )}

@@ -22,7 +22,7 @@ export const jobs: Job[] = [
     title: "QA Automation Engineer",
     company: "Klarna",
     location: "Stockholm, Sweden",
-    description: "Playwright automation and testing",
+    description: "VeryVeryVeryVeryVeryVeryVeryVeryLongCompanyNameWithoutSpacesPlaywright automation and testing",
     logo: placeholderlogo,
 
   },
@@ -36,12 +36,12 @@ export const jobs: Job[] = [
 
   },
   {
-    id: "4",
-    title: "React Developer",
-    company: "Volvo",
-    location: "Gothenburg, Sweden",
-    description: "UI dashboard development",
-    logo: placeholderlogo,
-
-  },
+  id: "4",
+  title: "SeniorFrontendPlatformEngineerForEnterpriseAnalyticsInfrastructureAndVisualizationSystems",
+  company: "InternationalBusinessMachinesAndCloudInfrastructurePartnersUnlimited",
+  location: "RemoteCairoEgyptMiddleEastNorthAfricaRegionWithoutAnySpaces",
+  logo: placeholderlogo,
+  description:
+    "We are looking for a highly experienced frontend engineer with deep expertise in React TypeScript performance optimization rendering pipelines accessibility large scale dashboard architecture design systems microfrontend integration data visualization realtime websocket infrastructure and cross functional collaboration across distributed engineering organizations."
+}
 ];
